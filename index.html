@@ -1,18 +1,148 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
 <style>
+  
+  h1 {
+    font-family: "Rubik Glitch", serif;
+    font-size: 40px;
+    color: pink;
+  }
   body {
-background-color: pink;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
     }
   .table {
     position: absolute;
+    bottom: -100px;
 
+  }
+  
+  .bubble-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: float 10s ease-in-out infinite;
+    opacity: 0.4;
+    transform-origin: center;
+    clip-path: circle(50% at 50% 50%);
+  }
+  
+  .bubble-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  pointer-events: none; /* Prevent text from being affected by mouse events */
+}
+  
+  .bubble:nth-child(1) {
+    width: 180px;
+    height: 180px;
+    background-color: blue;
+    left: 20px;
+    animation-duration: 8s;
+  animation-delay: 0s;
+  }
+  
+  .bubble:nth-child(2) {
+    animation-duration: 10s;
+    animation-delay: .5s;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    right: 200px;
+  }
+  
+  .bubble:nth-child(3) {
+    width: 220px;
+    height: 220px;
+    background-color: green;
+    right: 150px;
+    top: 300px;
+    animation-duration: 12s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(4) {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    left: -20px;
+    top: 300px;
+    animation-duration: 9s;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.4;
+    }
+    50% {
+    transform: translateY(-50px) translateX(100px) rotate(15deg);
+    opacity: 0.4;
+    }
+    75% {
+    transform: translateY(-50px) translateX(-50px) rotate(45deg);
+    opacity: 0.4;
+    }
+    100% {
+    transform: translateY(0) translateX(-50px) rotate(60deg);
+    opacity: 0.4;
+    }
   }
 </style>
 
+<center>
 <body>
 <h1>Sanaa Hood's Portfolio</h1>
 <h2>Choose a category </h2>
-
-</body>
 <div class="table">
 <img src="Adobe Express - file (3).png" alt="description of image"width="600px">
+  </div>
+  </body>
+  </center>
+
+ <div class="bubble-container">
+   
+   <a href="personal-projects.html" class="bubble-link">
+    <div class="bubble">
+      <div class="bubble-content">PERSONAL PROJECTS</div>
+    </div>
+   </a>
+   
+   <a href="major-projects.html" class="bubble-link">
+    <div class="bubble">
+      <div class="bubble-content">MAJOR PROJECTS</div>
+    </div>
+   </a>
+   
+    <a href="internship-projects.html" class="bubble-link">
+    <div class="bubble">
+      <div class="bubble-content">INTERNSHIP PROJECTS</div>
+   </div>
+   </a>
+   
+   <a href="about-me.html" class="bubble-link">
+       <div class="bubble">
+      <div class="bubble-content">ABOUT ME</div>
+    </div> 
+   </a>
+   
   </div>
